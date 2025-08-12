@@ -1,18 +1,23 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/components/**/*.{js,ts,jsx,tsx}",
-    "./src/app/**/*.{js,ts,jsx,tsx}"
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       colors: {
-        background: 'var(--background)',
-        foreground: 'var(--foreground)',
+        primary: "#C084FC",
+        secondary: "#F9A8D4",
+        light: "#FAFAFA",
+        dark: "#111827",
       },
       fontFamily: {
-        sans: ['var(--font-geist-sans)', 'sans-serif'],
-        mono: ['var(--font-geist-mono)', 'monospace'],
+        serif: ["var(--font-playfair)", "serif"],
+        sans: ["var(--font-inter)", "sans-serif"],
+      },
+      borderRadius: {
+        xl: "1rem",
+        "2xl": "1.5rem",
       },
     },
   },

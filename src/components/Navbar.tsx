@@ -1,14 +1,39 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
+  const pathname = usePathname();
+  const links = [
+    { href: "/", label: "Hem" },
+    { href: "/projects", label: "Projekt" },
+    { href: "/cv", label: "CV" },
+    { href: "/contact", label: "Kontakt" },
+  ];
+
   return (
-    <nav className="bg-gray-900 text-white p-4">
-      <ul className="flex gap-6">
-        <li><Link href="/">Om mig</Link></li>
-        <li><Link href="/projects">Projekt</Link></li>
-        <li><Link href="/cv">CV</Link></li>
-        <li><Link href="/contact">Kontakt</Link></li>
-      </ul>
+    <nav className="w-full bg-white border-b border-gray-200">
+      <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
+        <Link href="/" className="text-primary font-serif font-bold text-xl">
+          Portfolio
+        </Link>
+        <div className="flex space-x-6">
+          {links.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={`${
+                pathname === link.href
+                  ? "text-primary font-medium"
+                  : "text-gray-600 hover:text-primary"
+              } transition`}
+            >
+              {link.label}
+            </Link>
+          ))}
+        </div>
+      </div>
     </nav>
   );
 }

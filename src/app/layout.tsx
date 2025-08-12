@@ -1,17 +1,34 @@
+import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import { Inter, Playfair_Display } from "next/font/google";
 
-export const metadata = {
-  title: "Min Portfolio",
-  description: "Portfolio för kod, design och spelutveckling",
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["600", "700"],
+  variable: "--font-playfair",
+});
+
+export const metadata: Metadata = {
+  title: "Portfolio",
+  description: "Min portfolio utvecklad i Next.js och TypeScript",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="sv">
-      <body className="bg-gray-100 text-gray-900">
+    <html lang="sv" className={`${inter.variable} ${playfair.variable}`}>
+      <body className="font-sans">
         <Navbar />
-        <main className="max-w-5xl mx-auto p-6">{children}</main>
+        <main className="max-w-6xl mx-auto px-4">{children}</main>
       </body>
     </html>
   );
