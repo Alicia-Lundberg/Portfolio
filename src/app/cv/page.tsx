@@ -29,21 +29,31 @@ export default function CVPage() {
           <div className="grid md:grid-cols-3 gap-8">
             {/* Sidebar */}
             <div className="md:col-span-1 space-y-6">
+                {/* Profile picture */}
+                <div className="bg-white rounded-xl shadow p-6">
+                <div className="w-35 h-35 rounded-xl overflow-hidden mx-auto mb-4">
+                    <img
+                    src="/img/Alicia.jpeg"
+                    alt="Alicia Lundberg"
+                    className="w-full h-full object-cover"
+                    />
+                </div>
+              </div>
               {/* Contact Info */}
               <div className="bg-white rounded-xl shadow p-6">
                 <h3 className="text-lg font-semibold mb-4">Kontaktinfo</h3>
                 <div className="space-y-3">
                   <div className="flex items-center">
                     <Mail className="h-4 w-4 text-indigo-500 mr-3" />
-                    <span className="text-sm">din.email@exempel.se</span>
+                    <span className="text-sm">alicia_lundberg@hotmail.com</span>
                   </div>
                   <div className="flex items-center">
                     <Phone className="h-4 w-4 text-indigo-500 mr-3" />
-                    <span className="text-sm">+46 70 123 45 67</span>
+                    <span className="text-sm">+46 73 833 22 89</span>
                   </div>
                   <div className="flex items-center">
                     <MapPin className="h-4 w-4 text-indigo-500 mr-3" />
-                    <span className="text-sm">Stockholm, Sverige</span>
+                    <span className="text-sm">Lund, Sverige</span>
                   </div>
                 </div>
               </div>
@@ -102,26 +112,38 @@ export default function CVPage() {
 
               {/* Experience */}
               <div className="bg-white rounded-xl shadow p-6">
-                <h2 className="text-2xl font-semibold mb-6">Arbetslivserfarenhet</h2>
+                <h2 className="text-2xl font-semibold mb-6">Work experience</h2>
                 {[
                   {
-                    role: "Frontend Utvecklare",
-                    company: "Tech Startup AB",
-                    period: "2023 - Nu",
+                    role: "Regional Director",
+                    company: "We Know IT",
+                    period: "Jan 2025 - Present",
                     tasks: [
-                      "Utvecklade responsiva webbapplikationer med React och TypeScript",
-                      "Samarbetade i agila team för att leverera användarvänliga lösningar",
-                      "Implementerade modern UI/UX design med Tailwind CSS"
+                      "Promoted to Regional Director with responsibility for leading and developing the Skåne region in alignment with We Know IT’s strategies and goals. Expanded the company's presence through sales, customer acquisition, and strategic partnerships. Led talent acquisition efforts, including headhunting, interviewing, hiring, and onboarding, while continuing to lead projects."
                     ]
                   },
                   {
-                    role: "Fullstack Utvecklare",
-                    company: "Digital Agency",
-                    period: "2022 - 2023",
+                    role: "Project Manager",
+                    company: "We Know IT",
+                    period: "Sep 2024 - Present",
                     tasks: [
-                      "Byggde e-handelslösningar med modern JavaScript-stack",
-                      "Designade och implementerade RESTful APIs",
-                      "Optimerade applikationsprestanda och användarupplevelse"
+                      "Responsible for leading the development of high-quality digital platforms, including custom web and mobile applications. Managed cross-functional teams of developers and designers using Agile methodologies to ensure efficient iterative workflow and smooth collaboration. Acted as the main point of contact for clients, translating their needs into functional digital solutions and overseeing the process from concept to delivery with a focus on functionality and user experience."
+                    ]
+                  },
+                  {
+                    role: "Frontend Developer",
+                    company: "Pentronic",
+                    period: "Jun 2024 - Aug 2024",
+                    tasks: [
+                      "Initiated and led the frontend development of a responsive web application from scratch, focusing on UI/UX design. Researched and tested various libraries to determine the best technologies for the project. Built interactive measurement graphs and ensured a seamless experience across devices. Designed custom icons and graphics in Inkscape to enhance the user interface."
+                    ]
+                  },
+                  {
+                    role: "Team Leader",
+                    company: "Ica Maxi Västervik",
+                    period: "Jan 2021 - Aug 2021",
+                    tasks: [
+                      "Led a team of approximately 20 employees responsible for online food ordering and grocery delivery. My role involved customer service, team leadership, scheduling, and recruitment."
                     ]
                   }
                 ].map((job) => (
@@ -148,29 +170,33 @@ export default function CVPage() {
                 <h2 className="text-2xl font-semibold mb-6">Utbildning</h2>
                 <div className="border-l-2 border-indigo-500 pl-6">
                   <div className="flex items-center mb-2">
-                    <h3 className="text-lg font-semibold">Kandidatexamen i Datavetenskap</h3>
-                    <div className="flex items-center ml-auto text-sm text-gray-500">
-                      <Calendar className="h-4 w-4 mr-1" />
-                      2019 - 2022
-                    </div>
+                    <h3 className="text-lg font-semibold">M.Sc in Information and Communication Engineering Technologies</h3>
+            
                   </div>
-                  <p className="text-indigo-500 font-medium">KTH Kungliga Tekniska Högskolan</p>
+                  <p className="text-indigo-500 font-medium">LTH - Faculty of Engineering, Lund University</p>
                 </div>
               </div>
 
-              {/* Certifications */}
+              {/* Projects and associations */}
               <div className="bg-white rounded-xl shadow p-6">
-                <h2 className="text-2xl font-semibold mb-6">Certifieringar</h2>
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center">
-                    <span>AWS Certified Cloud Practitioner</span>
-                    <span className="text-sm text-gray-500">2023</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span>Meta Frontend Developer Certificate</span>
-                    <span className="text-sm text-gray-500">2022</span>
-                  </div>
-                </div>
+                <h2 className="text-2xl font-semibold mb-4">Projects and Associations</h2>
+                <h4 className="text font-semibold text-gray-400 mb-2">D-Guild LTH</h4>
+
+                <h3 className="text-lg font-semibold mb-2">Member of introduction coordinators</h3>
+                <p className="text-gray-600 leading-relaxed">        
+                    I was part of the group responsible for creating and hosting events for new students.
+                </p>
+
+                <h3 className="text-lg font-semibold mb-2">Member of Corporate Relations committee </h3>
+                <p className="text-gray-600 leading-relaxed">        
+                    Arranging lunch lectures, pubs and other events for the benefit of both our members and companies.
+                </p>
+                
+                <h4 className="text font-semibold text-gray-400 mb-2 mt-6">Alten</h4>
+                <h3 className="text-lg font-semibold mb-2">Student Ambassador</h3>
+                <p className="text-gray-600 leading-relaxed">          
+                    I organized events to promote and enhance marketing and exposure activities towards LTH students.
+                </p>
               </div>
             </div>
           </div>
