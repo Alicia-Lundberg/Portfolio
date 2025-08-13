@@ -17,17 +17,15 @@ const projects = [
   },
   // ...
 ];
-
-export default function Page({
-  params,
-}: {
-  params: { slug: string };
-}) {
-  const project = projects.find((p) => p.slug === params.slug);
-
-  if (!project) {
-    notFound();
-  }
+  export default function Page({
+    params,
+  }: {
+    params: { slug: string };
+  }) {
+    const project = projects.find((p) => p.slug === params.slug);
+    if (!project) {
+      notFound();
+    }
 
   return (
     <div className="max-w-4xl mx-auto py-20 px-4">
