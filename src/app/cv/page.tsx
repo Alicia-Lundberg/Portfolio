@@ -85,7 +85,7 @@ export default function CVPage() {
                 <div className="space-y-4">
                   {[
                     { title: "Project Management & Leadership", skills: ["Leading cross-functional teams", "Managing web & app development projects","Client communication & stakeholder management","Problem-solving & decision-making", "Agile Methodologies"] },
-                    { title: "Programming", skills: ["Java", "Javascript", "React", "TypeScript", "Next.js", "Tailwind CSS", "Node.js", "C#", "C++", "Firebase", "MySQL", "Git", "Flutter", "Python"] },
+                    { title: "Programming", skills: ["Java", "Javascript", "React", "TypeScript", "Next.js", "Tailwind CSS", "Node.js", "C#", "C++", "Firebase", "MySQL", "Git", "Vercel", "Flutter", "Python"] },
                     { title: "Design & Game Development", skills: ["Figma", "Blender", "Unity", "Maya", "Inkscape", "Linearity"] },
                     { title: "Sales & Business Development", skills: ["Customer acquisition", "Building and managing partnerships", "Sales & strategic outreach"] },
                     { title: "Recruitment & Talent Acquisition", skills: ["Headhunting & interviewing", "Hiring & onboarding"] }
