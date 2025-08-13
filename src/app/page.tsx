@@ -8,17 +8,17 @@ export default function Home() {
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-<div className="max-w-4xl mx-auto text-center">
-  <div className="mb-8">
-    <h1 className="text-5xl md:text-7xl font-serif font-medium mb-6">
-      Hi! I am{" "}
-      <span className="text-primary">Alicia</span>
-    </h1>
-    <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-light">
-      Curious mind and dedicated creator, combining leadership, design, and development to bring ideas to life.
-      Driven by questions, shaped by creativity, built with intention.
-    </p>
-  </div>
+      <div className="max-w-4xl mx-auto text-center">
+        <div className="mb-8">
+          <h1 className="text-5xl md:text-7xl font-serif font-medium mb-6">
+            Hi! I am{" "}
+            <span className="text-primary">Alicia</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-light">
+            Curious mind and dedicated creator, combining leadership, design, and development to bring ideas to life.
+            Driven by questions, shaped by creativity, built with intention.
+          </p>
+        </div>
 
   <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
     <Button
