@@ -15,17 +15,18 @@ const projects = [
     image: "/placeholder.svg",
     technologies: ["Figma", "Adobe XD", "Prototyping"],
   },
-  // ...
 ];
-  export default function Page({
-    params,
-  }: {
-    params: { slug: string };
-  }) {
-    const project = projects.find((p) => p.slug === params.slug);
-    if (!project) {
-      notFound();
-    }
+
+type Props = {
+  params: { slug: string }
+};
+
+export default function Page({ params }: Props) {
+  const project = projects.find((p) => p.slug === params.slug);
+
+  if (!project) {
+    notFound();
+  }
 
   return (
     <div className="max-w-4xl mx-auto py-20 px-4">
@@ -48,4 +49,11 @@ const projects = [
       </div>
     </div>
   );
+}
+
+// Lägger till denna för att Next.js vet vilka sidor som ska byggas
+export function generateStaticParams() {
+  return projects.map((project) => ({
+    slug: project.slug,
+  }));
 }
