@@ -17,14 +17,12 @@ const projects = [
   },
   // ...
 ];
-interface MyPage {
-  params: {
-    slug: string;
-  };
-}
 
-export default function Page({ params }: MyPage) {
-  const { slug } = params;
+export default function Page({
+  params,
+}: {
+  params: { slug: string };
+}) {
   const project = projects.find((p) => p.slug === params.slug);
 
   if (!project) {
