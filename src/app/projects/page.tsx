@@ -4,13 +4,28 @@ import { Github, ExternalLink } from "lucide-react";
 // Projektdata
 const projects = [
   {
-    slug: "e-commerce-platform",
-    title: "E-commerce Platform",
-    category: "Webbutveckling",
-    description: "Fullstack e-handelsplattform byggd med React och Node.js",
-    image: "/placeholder.svg",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+    slug: "Flappy Dragon",
+    title: "Flappy Dragon",
+    category: "Game",
+    description: "A fast-paced 2D side-scrolling game built in Unity, inspired by Flappy Bird.",
+    image: "/img/FlappyDragon.png",
+    technologies: ["Unity", "C#", "Inkscape"],
     featured: true,
+    //Code
+    //Demo
+    //gör så man kan klicka vart som (?) för att komma till detaljerad sida
+  },
+  {
+    slug: "Raft Tails",
+    title: "Raft Tails",
+    category: "Game",
+    description: "VR game developed in Unity 6 using Universal Render Pipeline (URP) and SteamVR. You play as a fox helping a rabbit cross a river by building a raft.",
+    image: "/img/Raft-Tails_Poster.png",
+    technologies: ["Unity", "SteamVR", "Blender"],
+    featured: true,
+    //Code
+    //Demo???
+    //gör så man kan klicka vart som (?) för att komma till detaljerad sida
   },
   {
     slug: "mobile-app-design",
@@ -33,7 +48,7 @@ const projects = [
   // ...resten
 ];
 
-const categories = ["Alla", "Webbutveckling", "Design", "Spelutveckling"];
+const categories = ["All", "Webb", "App", "Design", "Games"];
 
 export default function ProjectsPage() {
   return (
@@ -43,10 +58,10 @@ export default function ProjectsPage() {
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 font-serif">
-              Mina <span className="text-primary">Projekt</span>
+              My <span className="text-primary">Projects</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Utforska mina senaste projekt inom webbutveckling, design och spelutveckling
+              Take a look at some of my projects in web and app development, design, and game development.
             </p>
           </div>
 
@@ -68,7 +83,7 @@ export default function ProjectsPage() {
 
           {/* Featured Projects */}
           <div className="mb-16">
-            <h2 className="text-2xl font-bold mb-8">Utvalda projekt</h2>
+            <h2 className="text-2xl font-bold mb-8">Selected projects</h2>
             <div className="grid md:grid-cols-2 gap-8">
               {projects
                 .filter((project) => project.featured)
@@ -108,13 +123,13 @@ export default function ProjectsPage() {
                           href={`/projects/${project.slug}`}
                           className="px-3 py-2 border border-gray-300 rounded text-sm hover:border-primary hover:text-primary transition"
                         >
-                          Läs mer
+                          Read more
                         </Link>
                         <a
                           href="#"
                           className="flex items-center px-3 py-2 text-sm text-gray-600 hover:text-primary transition"
                         >
-                          <Github className="h-4 w-4 mr-2" /> Kod
+                          <Github className="h-4 w-4 mr-2" /> Code
                         </a>
                         <a
                           href="#"
@@ -131,7 +146,7 @@ export default function ProjectsPage() {
 
           {/* All Projects */}
           <div>
-            <h2 className="text-2xl font-bold mb-8">Alla projekt</h2>
+            <h2 className="text-2xl font-bold mb-8">All Projects</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {projects.map((project) => (
                 <div
@@ -158,7 +173,7 @@ export default function ProjectsPage() {
                       href={`/projects/${project.slug}`}
                       className="block text-center px-3 py-2 border border-gray-300 rounded text-sm hover:border-primary hover:text-primary transition"
                     >
-                      Visa projekt
+                      Show project
                     </Link>
                   </div>
                 </div>

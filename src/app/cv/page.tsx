@@ -1,7 +1,7 @@
 // src/app/cv/page.tsx
 "use client";
 
-import { Download, MapPin, Mail, Phone, Calendar } from "lucide-react";
+import { Download, MapPin, Mail, Phone, Calendar, Linkedin, Github } from "lucide-react";
 
 export default function CVPage() {
   return (
@@ -10,20 +10,18 @@ export default function CVPage() {
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Mitt <span className="bg-gradient-to-r from-indigo-500 to-pink-500 text-transparent bg-clip-text">CV</span>
-            </h1>
-            <p className="text-xl text-gray-600 mb-6">
-              Min professionella bakgrund och erfarenheter
-            </p>
             <a
-              href="/cv.pdf"
+              href="/CV.pdf"
               download
               className="inline-flex items-center px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-white rounded-lg shadow"
             >
               <Download className="h-4 w-4 mr-2" />
-              Ladda ner PDF
+              Download Resume (PDF)
             </a>
+
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 mt-10">
+              Alicia Lundberg - <span className="bg-gradient-to-r from-indigo-500 to-pink-500 text-transparent bg-clip-text">Resume</span>
+            </h1>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -40,32 +38,57 @@ export default function CVPage() {
                 </div>
               </div>
               {/* Contact Info */}
-              <div className="bg-white rounded-xl shadow p-6">
-                <h3 className="text-lg font-semibold mb-4">Kontaktinfo</h3>
+                <div className="bg-white rounded-xl shadow p-6">
+                <h3 className="text-lg font-semibold mb-4">Contact</h3>
                 <div className="space-y-3">
-                  <div className="flex items-center">
+                    <div className="flex items-center">
                     <Mail className="h-4 w-4 text-indigo-500 mr-3" />
                     <span className="text-sm">alicia_lundberg@hotmail.com</span>
-                  </div>
-                  <div className="flex items-center">
+                    </div>
+                    <div className="flex items-center">
                     <Phone className="h-4 w-4 text-indigo-500 mr-3" />
                     <span className="text-sm">+46 73 833 22 89</span>
-                  </div>
-                  <div className="flex items-center">
+                    </div>
+                    <div className="flex items-center">
                     <MapPin className="h-4 w-4 text-indigo-500 mr-3" />
                     <span className="text-sm">Lund, Sverige</span>
-                  </div>
+                    </div>
+                    <div className="flex items-center">
+                    <Linkedin className="h-4 w-4 text-indigo-500 mr-3" />
+                    <a
+                        href="https://www.linkedin.com/in/alicia-lundberg-99a148226/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-indigo-600 hover:underline"
+                    >
+                        LinkedIn
+                    </a>
+                    </div>
+                    <div className="flex items-center">
+                    <Github className="h-4 w-4 text-indigo-500 mr-3" />
+                    <a
+                        href="https://github.com/Alicia-Lundberg"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-indigo-600 hover:underline"
+                    >
+                        Github
+                    </a>
+                    </div>
                 </div>
-              </div>
+                </div>
+
 
               {/* Skills */}
               <div className="bg-white rounded-xl shadow p-6">
-                <h3 className="text-lg font-semibold mb-4">Tekniska färdigheter</h3>
+                <h3 className="text-lg font-semibold mb-4">Competences</h3>
                 <div className="space-y-4">
                   {[
-                    { title: "Frontend", skills: ["React", "TypeScript", "Next.js", "Tailwind CSS"] },
-                    { title: "Backend", skills: ["Node.js", "Express", "MongoDB", "PostgreSQL"] },
-                    { title: "Design & Spel", skills: ["Figma", "Adobe CS", "Unity", "Godot"] }
+                    { title: "Project Management & Leadership", skills: ["Leading cross-functional teams", "Managing web & app development projects","Client communication & stakeholder management","Problem-solving & decision-making", "Agile Methodologies"] },
+                    { title: "Programming", skills: ["Java", "Javascript", "React", "TypeScript", "Next.js", "Tailwind CSS", "Node.js", "C#", "C++", "Firebase", "MySQL", "Git", "Flutter", "Python"] },
+                    { title: "Design & Game Development", skills: ["Figma", "Blender", "Unity", "Maya", "Inkscape", "Linearity"] },
+                    { title: "Sales & Business Development", skills: ["Customer acquisition", "Building and managing partnerships", "Sales & strategic outreach"] },
+                    { title: "Recruitment & Talent Acquisition", skills: ["Headhunting & interviewing", "Hiring & onboarding"] }
                   ].map((section) => (
                     <div key={section.title}>
                       <h4 className="font-medium mb-2">{section.title}</h4>
@@ -99,16 +122,7 @@ export default function CVPage() {
 
             {/* Main Content */}
             <div className="md:col-span-2 space-y-8">
-              {/* Professional Summary */}
-              <div className="bg-white rounded-xl shadow p-6">
-                <h2 className="text-2xl font-semibold mb-4">Professionell sammanfattning</h2>
-                <p className="text-gray-600 leading-relaxed">
-                  Passionerad fullstack-utvecklare med stark bakgrund inom modern webbutveckling, 
-                  design och spelutveckling. Erfaren av att arbeta med React, Node.js och moderna 
-                  utvecklingsverktyg. Driven av att skapa användarvänliga och visuellt tilltalande 
-                  digitala lösningar.
-                </p>
-              </div>
+    
 
               {/* Experience */}
               <div className="bg-white rounded-xl shadow p-6">
@@ -156,11 +170,11 @@ export default function CVPage() {
                       </div>
                     </div>
                     <p className="text-indigo-500 font-medium mb-2">{job.company}</p>
-                    <ul className="text-gray-600 space-y-1">
+                    <div className="text-gray-600 space-y-1">
                       {job.tasks.map((task) => (
-                        <li key={task}>• {task}</li>
+                        <p key={task}>{task}</p>
                       ))}
-                    </ul>
+                    </div>
                   </div>
                 ))}
               </div>
