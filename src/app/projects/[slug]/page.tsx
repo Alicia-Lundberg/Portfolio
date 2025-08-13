@@ -17,12 +17,10 @@ const projects = [
   },
 ];
 
-type Props = {
-  params: { slug: string }
-};
+export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params; // Vänta på att params ska resolvas
 
-export default function Page({ params }: Props) {
-  const project = projects.find((p) => p.slug === params.slug);
+  const project = projects.find((p) => p.slug === slug);
 
   if (!project) {
     notFound();
@@ -51,7 +49,6 @@ export default function Page({ params }: Props) {
   );
 }
 
-// Lägger till denna för att Next.js vet vilka sidor som ska byggas
 export function generateStaticParams() {
   return projects.map((project) => ({
     slug: project.slug,
