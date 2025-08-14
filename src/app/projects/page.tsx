@@ -21,31 +21,43 @@ const projects = [
     category: "Game",
     description: "VR game developed in Unity 6 using Universal Render Pipeline (URP) and SteamVR. You play as a fox helping a rabbit cross a river by building a raft.",
     image: "/img/Raft-Tails_Poster.png",
-    technologies: ["Unity", "SteamVR", "Blender"],
+    technologies: ["Unity", "SteamVR", "Blender", "C#"],
     featured: true,
     //Code
     //Demo???
     //gör så man kan klicka vart som (?) för att komma till detaljerad sida
   },
   {
-    slug: "mobile-app-design",
-    title: "Mobile App Design",
-    category: "Design",
-    description: "Komplett UI/UX design för en fitness-tracking app",
-    image: "/placeholder.svg",
-    technologies: ["Figma", "Adobe XD", "Prototyping"],
+    slug: "Bowling Buddy",
+    title: "Bowling Buddy",
+    category: ["Game", "App"],
+    description: "Android app that lets users practice bowling anywhere, anytime. By swinging the phone, the app uses the accelerometer to detect throw speed and angle, determining whether the ball hits the pins.",
+    image: "/img/bowling-mobile.png",
+    technologies: ["Java", "Android Studio", "Android SDK", "Accelerometer (Sensors)"],
     featured: true,
   },
   {
-    slug: "2d-platformer-game",
-    title: "2D Platformer Game",
-    category: "Spelutveckling",
-    description: "Retro-inspirerat plattformsspel utvecklat i Unity",
-    image: "/placeholder.svg",
-    technologies: ["Unity", "C#", "Pixel Art"],
-    featured: false,
+    slug: "Portfolio",
+    title: "Portfolio",
+    category: "Webb",
+    description: "My personal portfolio website built with Next.js and Tailwind CSS, showcasing my projects and skills.",
+    image: "/img/portfolio.png",
+    technologies: ["Next.js", "Tailwind CSS", "React"],
+    featured: true,
   },
-  // ...resten
+  {
+    slug: "Green MAWS",
+    title: "Green MAWS",
+    category: "Figma",
+    description: "A Figma prototype for a mobile app that helps users make informed, eco-friendly shopping choices by comparing products’ environmental impact in a simple and motivating way.",
+    image: "/img/greenMAWS.png",
+    technologies: ["Figma", "Prototyping"],
+    featured: true,
+  },
+
+
+
+  //figma prototype link: https://www.figma.com/proto/LMvgeZkfetaIPPIOvBXTqd/Untitled?node-id=1-4&t=20xgqyRkG3a5GLIX-1
 ];
 
 const categories = ["All", "Webb", "App", "Design", "Games"];
@@ -153,13 +165,13 @@ export default function ProjectsPage() {
                   key={project.slug}
                   className="rounded-xl overflow-hidden border border-gray-200 bg-white shadow-sm hover:shadow-md transition"
                 >
-                  <div className="aspect-video bg-gray-100 relative overflow-hidden">
+                  <div className="aspect-[4/3] bg-gray-100 relative overflow-hidden">
                     <img
                       src={project.image}
                       alt={project.title}
                       className="w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
                     <div className="absolute bottom-4 left-4">
                       <span className="px-3 py-1 bg-primary/90 text-white text-sm rounded-full">
                         {project.category}

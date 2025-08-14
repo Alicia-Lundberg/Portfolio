@@ -8,12 +8,21 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#F9A8D4", // Rosa
+          DEFAULT: "#f9a8bf", // Rosa
+          
           foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "#C084FC", // Lila 
+          DEFAULT: "#ea97f7", // Lila 
           foreground: "#000000",
+        },
+        tertiary: {
+          DEFAULT: "#97a7f7", // Blå
+          foreground: "#000000",
+        },
+        tertiaryDark: {
+          DEFAULT: "#6b7df7", // Mörkblå
+          foreground: "#FFFFFF",
         },
         light: "#FAFAFA",
         dark: "#111827",

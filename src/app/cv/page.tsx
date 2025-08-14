@@ -13,14 +13,14 @@ export default function CVPage() {
             <a
               href="/CV.pdf"
               download
-              className="inline-flex items-center px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-white rounded-lg shadow"
+              className="inline-flex items-center px-4 py-2 bg-tertiary hover:bg-tertiaryDark text-white rounded-lg shadow"
             >
               <Download className="h-4 w-4 mr-2" />
               Download Resume (PDF)
             </a>
 
             <h1 className="text-4xl md:text-5xl font-bold mb-4 mt-10">
-              Alicia Lundberg - <span className="bg-gradient-to-r from-indigo-500 to-pink-500 text-transparent bg-clip-text">Resume</span>
+              Alicia Lundberg - <span className="bg-gradient-to-r from-primary to-tertiary text-transparent bg-clip-text">Resume</span>
             </h1>
           </div>
 
@@ -42,35 +42,40 @@ export default function CVPage() {
                 <h3 className="text-lg font-semibold mb-4">Contact</h3>
                 <div className="space-y-3">
                     <div className="flex items-center">
-                    <Mail className="h-4 w-4 text-indigo-500 mr-3" />
+                    <Mail className="h-4 w-4 text-tertiary
+     mr-3" />
                     <span className="text-sm">alicia_lundberg@hotmail.com</span>
                     </div>
                     <div className="flex items-center">
-                    <Phone className="h-4 w-4 text-indigo-500 mr-3" />
+                    <Phone className="h-4 w-4 text-tertiary
+     mr-3" />
                     <span className="text-sm">+46 73 833 22 89</span>
                     </div>
                     <div className="flex items-center">
-                    <MapPin className="h-4 w-4 text-indigo-500 mr-3" />
+                    <MapPin className="h-4 w-4 text-tertiary
+     mr-3" />
                     <span className="text-sm">Lund, Sverige</span>
                     </div>
                     <div className="flex items-center">
-                    <Linkedin className="h-4 w-4 text-indigo-500 mr-3" />
+                    <Linkedin className="h-4 w-4 text-tertiary
+     mr-3" />
                     <a
                         href="https://www.linkedin.com/in/alicia-lundberg-99a148226/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-sm text-indigo-600 hover:underline"
+                        className="text-sm text-tertiary hover:underline"
                     >
                         LinkedIn
                     </a>
                     </div>
                     <div className="flex items-center">
-                    <Github className="h-4 w-4 text-indigo-500 mr-3" />
+                    <Github className="h-4 w-4 text-tertiary
+     mr-3" />
                     <a
                         href="https://github.com/Alicia-Lundberg"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-sm text-indigo-600 hover:underline"
+                        className="text-sm text-tertiary hover:underline"
                     >
                         Github
                     </a>
@@ -94,7 +99,7 @@ export default function CVPage() {
                       <h4 className="font-medium mb-2">{section.title}</h4>
                       <div className="flex flex-wrap gap-1">
                         {section.skills.map((skill) => (
-                          <span key={skill} className="px-2 py-1 bg-indigo-50 text-indigo-600 text-xs rounded">
+                          <span key={skill} className="px-2 py-1 bg-tertiary/10 text-tertiaryDark text-xs rounded">
                             {skill}
                           </span>
                         ))}
@@ -110,11 +115,13 @@ export default function CVPage() {
                 <div className="space-y-2">
                   <div className="flex justify-between">
                     <span>Svenska</span>
-                    <span className="text-indigo-500">Modersmål</span>
+                    <span className="text-tertiary
+    ">Modersmål</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Engelska</span>
-                    <span className="text-indigo-500">Flytande</span>
+                    <span className="text-tertiary
+    ">Flytande</span>
                   </div>
                 </div>
               </div>
@@ -161,7 +168,7 @@ export default function CVPage() {
                     ]
                   }
                 ].map((job) => (
-                  <div key={job.role} className="border-l-2 border-indigo-500 pl-6 mb-6 last:mb-0">
+                  <div key={job.role} className="border-l-2 border-tertiary pl-6 mb-6 last:mb-0">
                     <div className="flex items-center mb-2">
                       <h3 className="text-lg font-semibold">{job.role}</h3>
                       <div className="flex items-center ml-auto text-sm text-gray-500">
@@ -169,7 +176,7 @@ export default function CVPage() {
                         {job.period}
                       </div>
                     </div>
-                    <p className="text-indigo-500 font-medium mb-2">{job.company}</p>
+                    <p className="text-tertiary font-medium mb-2">{job.company}</p>
                     <div className="text-gray-600 space-y-1">
                       {job.tasks.map((task) => (
                         <p key={task}>{task}</p>
@@ -182,12 +189,12 @@ export default function CVPage() {
               {/* Education */}
               <div className="bg-white rounded-xl shadow p-6">
                 <h2 className="text-2xl font-semibold mb-6">Utbildning</h2>
-                <div className="border-l-2 border-indigo-500 pl-6">
+                <div className="border-l-2 border-tertiary pl-6">
                   <div className="flex items-center mb-2">
                     <h3 className="text-lg font-semibold">M.Sc in Information and Communication Engineering Technologies</h3>
             
                   </div>
-                  <p className="text-indigo-500 font-medium">LTH - Faculty of Engineering, Lund University</p>
+                  <p className="text-tertiary font-medium">LTH - Faculty of Engineering, Lund University</p>
                 </div>
               </div>
 
