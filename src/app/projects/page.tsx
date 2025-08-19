@@ -2,10 +2,6 @@ import Link from "next/link";
 import { Github, ExternalLink } from "lucide-react";
 import { projects } from "@/data/projects";
 
-
-// Projektdata
-
-
 const categories = ["All", "Webb", "App", "Design", "Games"];
 
 export default function ProjectsPage() {
@@ -29,7 +25,7 @@ export default function ProjectsPage() {
               <button
                 key={category}
                 className={`px-4 py-2 rounded-full border transition ${
-                  category === "Alla"
+                  category === "All"
                     ? "bg-primary text-white"
                     : "border-gray-300 text-gray-600 hover:border-primary hover:text-primary"
                 }`}
@@ -48,7 +44,7 @@ export default function ProjectsPage() {
                 .map((project) => (
                   <div
                     key={project.slug}
-                    className="rounded-xl overflow-hidden border border-gray-200 bg-white shadow-sm hover:shadow-md transition"
+                    className="rounded-xl overflow-hidden border border-gray-200 bg-white shadow-sm hover:shadow-md transition flex flex-col"
                   >
                     <div className="aspect-[4/3] bg-gray-100 relative overflow-hidden">
                       <img
@@ -63,34 +59,38 @@ export default function ProjectsPage() {
                         </span>
                       </div>
                     </div>
-                    <div className="p-6">
-                      <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                      <p className="text-gray-600 mb-4">{project.description}</p>
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        {project.technologies.map((tech) => (
-                          <span
-                            key={tech}
-                            className="px-2 py-1 bg-primary/10 text-primary text-xs rounded"
-                          >
-                            {tech}
-                          </span>
-                        ))}
+                    <div className="p-6 flex flex-col justify-between flex-1">
+                      <div>
+                        <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                        <p className="text-gray-600 mb-4">{project.description}</p>
+                        <div className="flex flex-wrap gap-2 mb-4">
+                          {project.technologies.map((tech) => (
+                            <span
+                              key={tech}
+                              className="px-2 py-1 bg-primary/10 text-primary text-xs rounded"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
                       </div>
-                      <div className="flex gap-3">
+                      <div className="flex gap-3 mt-4">
                         <Link
                           href={`/projects/${project.slug}`}
                           className="px-3 py-2 border border-gray-300 rounded text-sm hover:border-primary hover:text-primary transition"
                         >
                           Read more
                         </Link>
-                        <a
-                          href={project.codeURL}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center px-3 py-2 text-sm text-gray-600 hover:text-primary transition"
-                        >
-                          <Github className="h-4 w-4 mr-2" /> Code
-                        </a>
+                        {project.codeURL && (
+                          <a
+                            href={project.codeURL}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center px-3 py-2 text-sm text-gray-600 hover:text-primary transition"
+                          >
+                            <Github className="h-4 w-4 mr-2" /> Code
+                          </a>
+                        )}
                         {project.demo && (
                           <a
                             href={project.demo}
@@ -111,11 +111,11 @@ export default function ProjectsPage() {
           {/* All Projects */}
           <div>
             <h2 className="text-2xl font-bold mb-8">All Projects</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 gap-8">
               {projects.map((project) => (
                 <div
                   key={project.slug}
-                  className="rounded-xl overflow-hidden border border-gray-200 bg-white shadow-sm hover:shadow-md transition"
+                  className="rounded-xl overflow-hidden border border-gray-200 bg-white shadow-sm hover:shadow-md transition flex flex-col"
                 >
                   <div className="aspect-[4/3] bg-gray-100 relative overflow-hidden">
                     <img
@@ -130,15 +130,49 @@ export default function ProjectsPage() {
                       </span>
                     </div>
                   </div>
-                  <div className="p-4">
-                    <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
-                    <p className="text-gray-600 text-sm mb-3">{project.description}</p>
-                    <Link
-                      href={`/projects/${project.slug}`}
-                      className="block text-center px-3 py-2 border border-gray-300 rounded text-sm hover:border-primary hover:text-primary transition"
-                    >
-                      Show project
-                    </Link>
+                  <div className="p-6 flex flex-col justify-between flex-1">
+                    <div>
+                      <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                      <p className="text-gray-600 mb-4">{project.description}</p>
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {project.technologies.map((tech) => (
+                          <span
+                            key={tech}
+                            className="px-2 py-1 bg-primary/10 text-primary text-xs rounded"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="flex gap-3 mt-4">
+                      <Link
+                        href={`/projects/${project.slug}`}
+                        className="px-3 py-2 border border-gray-300 rounded text-sm hover:border-primary hover:text-primary transition"
+                      >
+                        Read more
+                      </Link>
+                      {project.codeURL && (
+                        <a
+                          href={project.codeURL}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center px-3 py-2 text-sm text-gray-600 hover:text-primary transition"
+                        >
+                          <Github className="h-4 w-4 mr-2" /> Code
+                        </a>
+                      )}
+                      {project.demo && (
+                        <a
+                          href={project.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center px-3 py-2 text-sm text-gray-600 hover:text-primary transition"
+                        >
+                          <ExternalLink className="h-4 w-4 mr-2" /> Demo
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
               ))}

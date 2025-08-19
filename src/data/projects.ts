@@ -19,11 +19,8 @@ export const projects = [
     description: "VR game developed in Unity 6 using Universal Render Pipeline (URP) and SteamVR. You play as a fox helping a rabbit cross a river by building a raft.",
     image: "/img/Raft-Tails_Poster.png",
     technologies: ["Unity", "SteamVR", "Blender", "C#"],
-    featured: true,
+    featured: false,
     codeURL: "https://github.com/Alicia-Lundberg/Raft-Tails",
-
-    //Demo???
-    //gör så man kan klicka vart som (?) för att komma till detaljerad sida
   },
   {
     slug: "bowling-buddy",
@@ -32,7 +29,7 @@ export const projects = [
     description: "Android app that lets users practice bowling anywhere, anytime. By swinging the phone, the app uses the accelerometer to detect throw speed and angle, determining whether the ball hits the pins.",
     image: "/img/bowling-mobile.png",
     technologies: ["Java", "Android Studio", "Android SDK", "Accelerometer (Sensors)"],
-    featured: true,
+    featured: false,
     codeURL: "https://github.com/Alicia-Lundberg/Bowling-Buddy",
   },
   {
@@ -42,7 +39,7 @@ export const projects = [
     description: "My personal portfolio website built with Next.js and Tailwind CSS, showcasing my projects and skills.",
     image: "/img/portfolio.png",
     technologies: ["Next.js", "Tailwind CSS", "React"],
-    featured: true,
+    featured: false,
     codeURL: "https://github.com/Alicia-Lundberg/Portfolio",
   },
   {
@@ -52,8 +49,9 @@ export const projects = [
     description: "A Figma prototype for a mobile app that helps users make informed, eco-friendly shopping choices by comparing products’ environmental impact in a simple and motivating way.",
     image: "/img/greenMAWS.png",
     technologies: ["Figma", "Prototyping"],
-    featured: true,
+    featured: false,
     //ta bort codeURL, det är en prototyp ?? 
+    demo: "https://www.figma.com/proto/LMvgeZkfetaIPPIOvBXTqd/Untitled?node-id=1-4&t=20xgqyRkG3a5GLIX-1",
   },
   {
     slug: "rateflix",
@@ -62,7 +60,7 @@ export const projects = [
     description: "",
     image: "/img/placeholder.png",
     technologies: ["JavaScript", "React", "Bootstrap", "Firebase"],
-    featured: true,
+    featured: false,
     //codeURL: "https://github.com/Alicia-Lundberg/RateFlix",
   },
   {
@@ -72,11 +70,9 @@ export const projects = [
     description: " ",
     image: "/img/placeholder.png",
     technologies: ["Unity", "C#"],
-    featured: true,
+    featured: false,
     codeURL: "https://github.com/Alicia-Lundberg/Car-Race",
-
-    //Demo
-    //gör så man kan klicka vart som (?) för att komma till detaljerad sida
+    //Demo ??
   },
   {
     slug: "weather-app",
@@ -85,7 +81,7 @@ export const projects = [
     description: "",
     image: "/img/placeholer.png",
     technologies: ["Flutter", "Dart"],
-    featured: true,
+    featured: false,
     codeURL: "https://github.com/Alicia-Lundberg/Weather-App",
   },
   {
@@ -95,9 +91,7 @@ export const projects = [
     description: "A collection of illustrations created using Inkscape and Linearity.",
     image: "/img/CheckeredVase.png", //several images, aroound 5
     technologies: ["Inkscape", "Curve"],
-    featured: true,
-    //ta bort codeURL, det är en samling illustrationer
-    //Demo: figma prototype link: https://www.figma.com/proto/LMvgeZkfetaIPPIOvBXTqd/Untitled?node-id=1-4&t=20xgqyRkG3a5GLIX-1
+    featured: false,
   },
 
 
