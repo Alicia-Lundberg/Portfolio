@@ -3,8 +3,8 @@ import { projects } from "@/data/projects";
 import ProjectCarousel from "./ProjectCarousel";
 
 
-export default function Page({ params }: { params: { slug: string } }) {
-  const { slug } = params;
+export default async function Page({ params }: { params: Promise<{ slug: string }> }) { //Funkar på vercel nu!
+  const { slug } = await params; 
   const project = projects.find((p) => p.slug === slug);
 
   if (!project) notFound();
