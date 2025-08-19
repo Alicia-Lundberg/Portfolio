@@ -91,12 +91,16 @@ export default function ProjectsPage() {
                         >
                           <Github className="h-4 w-4 mr-2" /> Code
                         </a>
-                        <a
-                          href="#"
-                          className="flex items-center px-3 py-2 text-sm text-gray-600 hover:text-primary transition"
-                        >
-                          <ExternalLink className="h-4 w-4 mr-2" /> Demo
-                        </a>
+                        {project.demo && (
+                          <a
+                            href={project.demo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center px-3 py-2 text-sm text-gray-600 hover:text-primary transition"
+                          >
+                            <ExternalLink className="h-4 w-4 mr-2" /> Demo
+                          </a>
+                        )}
                       </div>
                     </div>
                   </div>

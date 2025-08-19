@@ -8,9 +8,9 @@ export const projects = [
     technologies: ["Unity", "C#", "Inkscape"],
     featured: true,
     codeURL: "https://github.com/Alicia-Lundberg/Flappy-Dragon",
+    demo: "/demo/flappy-dragon/index.html" 
 
-    //Demo
-    //gör så man kan klicka vart som (?) för att komma till detaljerad sida
+
   },
   {
     slug: "raft-tails",
