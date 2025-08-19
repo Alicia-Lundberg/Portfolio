@@ -3,7 +3,7 @@ import { projects } from "@/data/projects";
 import ProjectCarousel from "./ProjectCarousel";
 
 
-export default function Page({ params }: { params: { slug: string } }) {
+export default function Page({ params }: any) {
   const { slug } = params;
   const project = projects.find((p) => p.slug === slug);
 
