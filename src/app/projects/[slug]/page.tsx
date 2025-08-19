@@ -1,23 +1,8 @@
 import { notFound } from "next/navigation";
+import { projects } from "@/data/projects";
 
-const projects = [
-  {
-    slug: "e-commerce-platform",
-    title: "E-commerce Platform",
-    description: "Fullstack e-handelsplattform byggd med React och Node.js...",
-    image: "/placeholder.svg",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-  },
-  {
-    slug: "mobile-app-design",
-    title: "Mobile App Design",
-    description: "Komplett UI/UX design för en fitness-tracking app...",
-    image: "/placeholder.svg",
-    technologies: ["Figma", "Adobe XD", "Prototyping"],
-  },
-];
 
-export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
+export default async function Page({ params }: { params: Promise<{ slug: string }> }) { //Funkar på vercel nu!
   const { slug } = await params; // Vänta på att params ska resolvas
 
   const project = projects.find((p) => p.slug === slug);
