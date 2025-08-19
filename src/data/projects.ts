@@ -25,7 +25,7 @@ export const projects = [
   {
     slug: "bowling-buddy",
     title: "Bowling Buddy",
-    category: ["Game"],
+    category: "App",
     description: "Android app that lets users practice bowling anywhere, anytime. By swinging the phone, the app uses the accelerometer to detect throw speed and angle, determining whether the ball hits the pins.",
     image: "/img/bowling-mobile.png",
     technologies: ["Java", "Android Studio", "Android SDK", "Accelerometer (Sensors)"],
@@ -87,9 +87,15 @@ export const projects = [
   {
     slug: "illustrations",
     title: "Illustrations",
-    category: "Illustations",
+    category: "Illustrations",
     description: "A collection of illustrations created using Inkscape and Linearity.",
-    image: "/img/CheckeredVase.png", //several images, aroound 5
+    image: [
+    "/img/CheckeredVase.png",
+    "/img/Carnation.png",
+    "/img/Dachhund.png",
+    "/img/Poppy.png",
+    "/img/Tulips.png",
+  ],
     technologies: ["Inkscape", "Curve"],
     featured: false,
   },
