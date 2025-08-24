@@ -85,7 +85,7 @@ export const projects = [
     title: "Green MAWS",
     category: "Figma",
     description: "A Figma prototype for a mobile app that helps users make informed, eco-friendly shopping choices by comparing products’ environmental impact in a simple and motivating way.",
-    image: "/img/greenmaws.png",
+    image: "/img/greenmaws-v2.png",
     technologies: ["Figma", "Prototyping"],
     featured: false,
     //ta bort codeURL, det är en prototyp ?? 
