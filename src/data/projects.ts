@@ -5,12 +5,20 @@ export const projects = [
     category: "Game",
     description: "A fast-paced 2D side-scrolling game built in Unity, inspired by Flappy Bird.",
     image: "/img/FlappyDragon.png",
-    technologies: ["Unity", "C#", "Inkscape"],
+    technologies: ["Unity", "C#", "Inkscape", "test", "test2"],
     featured: true,
     codeURL: "https://github.com/Alicia-Lundberg/Flappy-Dragon",
-    demo: "/demo/flappy-dragon/index.html" 
-
-
+    demo: "/demo/flappy-dragon/index.html",
+    longDescription: "Flappy Dragon is a Unity-based 2D game where you control a dragon and navigate through obstacles.",
+    features: [
+      "Simple tap controls",
+      "3 lives system",
+      "Collect hearts to refill lives",
+      "Score tracking and leaderboard"
+    ],
+    challenges: "Optimizing physics and collision detection for smooth gameplay.",
+    learned: "Improved knowledge of Unity physics, C# scripting, and UI layout.",
+    date: "2024-06-01",
   },
   {
     slug: "raft-tails",
@@ -21,6 +29,16 @@ export const projects = [
     technologies: ["Unity", "SteamVR", "Blender", "C#"],
     featured: false,
     codeURL: "https://github.com/Alicia-Lundberg/Raft-Tails",
+    longDescription: " ",
+    features: [
+      " ",
+      "",
+      "",
+      ""
+    ],
+    challenges: "",
+    learned: "",
+    date: "",
   },
   {
     slug: "bowling-buddy",
@@ -31,6 +49,16 @@ export const projects = [
     technologies: ["Java", "Android Studio", "Android SDK", "Accelerometer (Sensors)"],
     featured: false,
     codeURL: "https://github.com/Alicia-Lundberg/Bowling-Buddy",
+    longDescription: "",
+    features: [
+      "",
+      "",
+      "",
+      ""
+    ],
+    challenges: "",
+    learned: "",
+    date: "2024-06-01",
   },
   {
     slug: "portfolio",
@@ -41,6 +69,16 @@ export const projects = [
     technologies: ["Next.js", "Tailwind CSS", "React"],
     featured: false,
     codeURL: "https://github.com/Alicia-Lundberg/Portfolio",
+    longDescription: "",
+    features: [
+      "",
+      "",
+      "",
+      ""
+    ],
+    challenges: "",
+    learned: "",
+    date: "2024-06-01",
   },
   {
     slug: "green-maws",
@@ -52,7 +90,17 @@ export const projects = [
     featured: false,
     //ta bort codeURL, det är en prototyp ?? 
     demo: "https://www.figma.com/proto/LMvgeZkfetaIPPIOvBXTqd/Untitled?node-id=1-4&t=20xgqyRkG3a5GLIX-1",
-  },
+    longDescription: "",
+    features: [
+      "",
+      "",
+      "",
+      ""
+    ],
+    challenges: "",
+    learned: "",
+    date: "2024-06-01",
+  },/*
   {
     slug: "rateflix",
     title: "RateFlix",
@@ -83,21 +131,31 @@ export const projects = [
     technologies: ["Flutter", "Dart"],
     featured: false,
     codeURL: "https://github.com/Alicia-Lundberg/Weather-App",
-  },
+  },*/
   {
     slug: "illustrations",
     title: "Illustrations",
     category: "Illustrations",
     description: "A collection of illustrations created using Inkscape and Linearity.",
     image: [
-    "/img/CheckeredVase.png",
-    "/img/Carnation.png",
-    "/img/Dachhund.png",
-    "/img/Poppy.png",
-    "/img/Tulips.png",
-  ],
+      "/img/CheckeredVase.png",
+      "/img/Carnation.png",
+      "/img/Dachhund.png",
+      "/img/Poppy.png",
+      "/img/Tulips.png",
+    ],
     technologies: ["Inkscape", "Curve"],
     featured: false,
+    longDescription: "",
+    features: [
+      "",
+      "",
+      "",
+      ""
+    ],
+    challenges: "",
+    learned: "",
+    date: "2024-06-01",
   },
 
 

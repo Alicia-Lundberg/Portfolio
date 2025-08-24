@@ -12,8 +12,12 @@ export default function ProjectCarousel({ images }: Props) {
   const prev = () => setCurrent((prev) => (prev - 1 + images.length) % images.length);
 
   return (
-    <div className="relative w-full">
-      <img src={images[current]} alt={`Slide ${current}`} className="max-w-full max-h-[700px] mx-auto object-contain rounded-xl" />
+    <div className="relative w-full rounded-xl overflow-hidden">
+      <img
+        src={images[current]}
+        alt={`Slide ${current}`}
+        className="w-full max-h-[700px] object-cover"
+      />
       {/* Prev button */}
       <button
         onClick={prev}
