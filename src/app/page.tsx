@@ -16,9 +16,10 @@ export default function Home() {
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-light">
             Curious mind and dedicated creator, combining leadership, design, and development to bring ideas to life.
-            Driven by questions, shaped by creativity, built with intention.
-          </p>
+            
+          </p> {/*Driven by questions, shaped by creativity, built with intention.*/}
         </div>
+       
 
   <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
     <Button

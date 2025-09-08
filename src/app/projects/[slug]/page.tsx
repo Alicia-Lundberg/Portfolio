@@ -127,7 +127,7 @@ export default async function Page({
                   <Button asChild className="bg-primary hover:bg-primary/90">
                     <a href={project.demo} target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="h-4 w-4 mr-2" />
-                      Play Game
+                      Demo
                     </a>
                   </Button>
                 )}

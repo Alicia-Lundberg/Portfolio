@@ -17,6 +17,9 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Portfolio",
   description: "Min portfolio utvecklad i Next.js och TypeScript",
+  icons: {
+    icon: "/IconWhite.png",
+  },
 };
 
 export default function RootLayout({

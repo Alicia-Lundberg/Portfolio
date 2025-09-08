@@ -5,7 +5,7 @@ export const projects = [
     category: "Game",
     description: "A fast-paced 2D side-scrolling game built in Unity, inspired by Flappy Bird.",
     image: "/img/FlappyDragon.png",
-    technologies: ["Unity", "C#", "Inkscape", "test", "test2"],
+    technologies: ["Unity", "C#", "Inkscape"],
     featured: true,
     codeURL: "https://github.com/Alicia-Lundberg/Flappy-Dragon",
     demo: "/demo/flappy-dragon/index.html",

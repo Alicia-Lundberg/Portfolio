@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Github, ExternalLink } from "lucide-react";
 import { projects } from "@/data/projects";
 
-const categories = ["All", "Webb", "App", "Game", "Figma", "Illustrations"]; // OBS: matchar exakt projekten
+const categories = ["All", "Webb", "App", "Game", "Figma", "Illustrations"];
 
 export default function ProjectsPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
@@ -49,7 +49,8 @@ export default function ProjectsPage() {
             {filteredProjects.map((project) => (
               <div
                 key={project.slug}
-                className="rounded-xl overflow-hidden border border-gray-200 bg-white shadow-sm hover:shadow-md transition flex flex-col justify-between h-full"
+                onClick={() => (window.location.href = `/projects/${project.slug}`)}
+                className="cursor-pointer rounded-xl overflow-hidden border border-gray-200 bg-white shadow-sm hover:shadow-md transition flex flex-col justify-between h-full"
               >
                 <div>
                   <div className="aspect-[4/3] bg-gray-100 relative overflow-hidden">
@@ -67,8 +68,8 @@ export default function ProjectsPage() {
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                    <p className="text-gray-600 mb-4">{project.description}</p>
-                    <div className="flex flex-wrap gap-2 mb-4">
+                    <p className="text-gray-600 mb-3">{project.description}</p>
+                    <div className="flex flex-wrap gap-2 mb-0">
                       {project.technologies.map((tech) => (
                         <span
                           key={tech}
@@ -81,19 +82,15 @@ export default function ProjectsPage() {
                   </div>
                 </div>
 
+                {/* Code & Demo länkarna */}
                 <div className="flex gap-3 p-6 pt-0 mt-auto">
-                  <Link
-                    href={`/projects/${project.slug}`}
-                    className="px-3 py-2 border border-gray-300 rounded text-sm hover:border-primary hover:text-primary transition"
-                  >
-                    Read more
-                  </Link>
                   {project.codeURL && (
                     <a
                       href={project.codeURL}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center px-3 py-2 text-sm text-gray-600 hover:text-primary transition"
+                      onClick={(e) => e.stopPropagation()} // <--- viktigt
+                      className="flex items-center px-3 py-2 text-sm text-gray-600 hover:text-primary transition border border-gray-300 rounded"
                     >
                       <Github className="h-4 w-4 mr-2" /> Code
                     </a>
@@ -103,7 +100,8 @@ export default function ProjectsPage() {
                       href={project.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center px-3 py-2 text-sm text-gray-600 hover:text-primary transition"
+                      onClick={(e) => e.stopPropagation()} // <--- viktigt
+                      className="flex items-center px-3 py-2 text-sm text-gray-600 hover:text-primary transition border border-gray-300 rounded"
                     >
                       <ExternalLink className="h-4 w-4 mr-2" /> Demo
                     </a>
