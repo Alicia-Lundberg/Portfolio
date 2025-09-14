@@ -57,19 +57,20 @@ export default async function Page({
           <div className="flex flex-col md:flex-row gap-8 mb-12">
             {/* Image */}
             <div className="flex-1">
-              <div className="aspect-[4/3] bg-gray-100 relative overflow-hidden rounded-xl">
-                {Array.isArray(project.image) ? (
-                  <ProjectCarousel images={project.image} />
-                ) : (
+              {Array.isArray(project.image) ? (
+                <ProjectCarousel images={project.image} />
+              ) : (
+                <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden bg-gray-100">
                   <Image
                     src={project.image}
                     alt={project.title}
                     fill
                     className="object-cover rounded-xl"
                   />
-                )}
-              </div>
+                </div>
+              )}
             </div>
+       
 
             {/* Sidebar: Technologies + Project Info */}
             <div className="w-full md:w-80 space-y-6">

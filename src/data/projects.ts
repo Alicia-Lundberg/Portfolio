@@ -13,7 +13,6 @@ export const projects = [
       "Flappy Dragon is a Unity-based 2D game inspired by the classic Flappy Bird.",
       "You control a dragon and navigate through obstacles, aiming to achieve the highest score possible by passing through gaps without crashing. ",
       "The game features simple tap controls, a parallax scrolling background, and sound effects to enhance the experience. ", 
-      "",
       "While much of the base artwork comes from free online resources, the dragon character was customized with original details such as hand-designed wings and additional features. ",
       "To bring it to life, I created a frame-by-frame sprite animation with 8 unique poses, including wing flaps, blinking, and subtle arm movements, giving the game a more dynamic and personal touch. "],
     features: [
@@ -105,12 +104,21 @@ export const projects = [
     featured: false,
     //ta bort codeURL, det är en prototyp ?? 
     demo: "https://www.figma.com/proto/LMvgeZkfetaIPPIOvBXTqd/Untitled?node-id=1-4&t=20xgqyRkG3a5GLIX-1",
-    longDescription: "",
+    longDescription: [
+        "Green Maws is a conceptual mobile app designed to help users make more sustainable shopping choices in a fun, engaging, and informative way. ",
+        "This group project focused on interaction design and user experience, exploring how digital tools can motivate eco-friendly behavior in everyday life. ",
+        "The app allows users to scan the barcode of a product in the store using their phone camera. After scanning, the app instantly displays detailed information about the product’s environmental impact, including: ",
+        "Water consumption, Carbon emissions, Eutrophication (over-fertilization), Pesticide use, An overall average score (1–5) representing the product’s environmental impact. ",
+        "Additionally, the app shows relevant eco-labels with clear explanations. All information is presented visually, with intuitive colors and symbols to make it easy for users to understand quickly. ",
+        "To increase engagement and motivate sustainable behavior, Green Maws uses a gamified plant growth system. The user’s virtual plant grows when they complete sustainable purchases, giving a visual representation of the positive impact of their choices. Over time, the plant becomes a personalized symbol of progress, encouraging repeated use and fostering a sense of accomplishment. ",
+        "We developed an interactive prototype in Figma that demonstrates the core app functionality, including scanning flows, product impact visualization, and plant growth interactions. The prototype emphasizes clarity, usability, and visual motivation, showing how users can make informed and eco-friendly choices in a playful, engaging way."
+    ],
     features: [
-      "",
-      "",
-      "",
-      ""
+      "Interactive Figma prototype",
+      "Scan products to see environmental impact",
+      "View eco-labels with explanations",
+      "Color & symbol indicators for clarity",
+      "Plant grows to motivate sustainable shopping",
     ],
     //learned: "",
     date: "2024-06-01",
@@ -164,10 +172,9 @@ export const projects = [
     features: [
       "",
       "",
-      "",
       ""
     ],
-    date: "2024-06-01",
+    date: "2022-06-01",
   },
 
 

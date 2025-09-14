@@ -16,7 +16,7 @@ export default function ProjectCarousel({ images }: Props) {
       <img
         src={images[current]}
         alt={`Slide ${current}`}
-        className="w-full max-h-[700px] object-cover"
+        className="w-full h-auto max-h-[700px] mx-auto object-contain rounded-xl"
       />
       {/* Prev button */}
       <button
