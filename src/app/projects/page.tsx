@@ -2,13 +2,14 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Github, ExternalLink } from "lucide-react";
+import { Github, ExternalLink, X } from "lucide-react";
 import { projects } from "@/data/projects";
 
 const categories = ["All", "Webb", "App", "Game", "Figma", "Illustrations"];
 
 export default function ProjectsPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
+  const [showPopup, setShowPopup] = useState(true); // popup state
 
   const filteredProjects = projects.filter((project) =>
     selectedCategory === "All" ? true : project.category === selectedCategory
@@ -16,6 +17,26 @@ export default function ProjectsPage() {
 
   return (
     <div className="min-h-screen pt-16">
+      
+      {/* Popup högst upp till vänster */}
+      {showPopup && (
+        <div className="fixed top-24 left-24 z-50 bg-white border border-gray-300 shadow-lg rounded-md p-4 w-72 flex flex-col">
+          <div className="flex justify-between items-start">
+            <p className="text-sm text-gray-700">
+              Hi, great to have you here! The page is still under construction and not all projects have been added yet.
+            </p>
+            <button
+              onClick={() => setShowPopup(false)}
+              className="ml-2 text-gray-500 hover:text-gray-700"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+      )}
+
+
+
       <div className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">

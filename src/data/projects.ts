@@ -9,16 +9,22 @@ export const projects = [
     featured: true,
     codeURL: "https://github.com/Alicia-Lundberg/Flappy-Dragon",
     demo: "/demo/flappy-dragon/index.html",
-    longDescription: "Flappy Dragon is a Unity-based 2D game where you control a dragon and navigate through obstacles.",
+    longDescription: [
+      "Flappy Dragon is a Unity-based 2D game inspired by the classic Flappy Bird.",
+      "You control a dragon and navigate through obstacles, aiming to achieve the highest score possible by passing through gaps without crashing. ",
+      "The game features simple tap controls, a parallax scrolling background, and sound effects to enhance the experience. ", 
+      "",
+      "While much of the base artwork comes from free online resources, the dragon character was customized with original details such as hand-designed wings and additional features. ",
+      "To bring it to life, I created a frame-by-frame sprite animation with 8 unique poses, including wing flaps, blinking, and subtle arm movements, giving the game a more dynamic and personal touch. "],
     features: [
+      "Score tracking and high score saving",
+      "Infinite parallax scrolling background",
+      "Sound effects and background music",
       "Simple tap controls",
       "3 lives system",
       "Collect hearts to refill lives",
-      "Score tracking and leaderboard"
     ],
-    challenges: "Optimizing physics and collision detection for smooth gameplay.",
-    learned: "Improved knowledge of Unity physics, C# scripting, and UI layout.",
-    date: "2024-06-01",
+    date: "2024-12-01",
   },
   {
     slug: "raft-tails",
@@ -29,16 +35,20 @@ export const projects = [
     technologies: ["Unity", "SteamVR", "Blender", "C#"],
     featured: false,
     codeURL: "https://github.com/Alicia-Lundberg/Raft-Tails",
-    longDescription: " ",
-    features: [
-      " ",
-      "",
-      "",
-      ""
+    longDescription: [
+      "Raft Tails is a VR game developed as part of a Virtual Reality course in Unity 6, using the Universal Render Pipeline (URP) and SteamVR. ",
+      "You play as a fox helping a rabbit cross a river by building a raft. ",
+      "The game starts in a small village and takes you through a scenic environment over a bridge and past a creek, until you reach a waterfall and a larger river. ",
+      "There, your rabbit friend needs your help. To complete the objective, you collect sticks and assemble a raft that the rabbit can use to cross the river. ",
+      "The rabbit character and the raft were modeled and animated entirely in Blender. The raft features subtle animations to make its movement feel natural and dynamic. ",
+      "Raft Tails combines VR interaction with puzzle-like mechanics, emphasizing exploration and environmental engagement."
     ],
-    challenges: "",
-    learned: "",
-    date: "",
+    features: [
+      "Immersive VR gameplay",
+      "Scenic environments",
+      "Custom-made rabbit and raft modeling and animation"
+    ],
+    date: "2024-06-01",
   },
   {
     slug: "bowling-buddy",
@@ -46,19 +56,25 @@ export const projects = [
     category: "App",
     description: "Android app that lets users practice bowling anywhere, anytime. By swinging the phone, the app uses the accelerometer to detect throw speed and angle, determining whether the ball hits the pins.",
     image: "/img/bowling-mobile.png",
-    technologies: ["Java", "Android Studio", "Android SDK", "Accelerometer (Sensors)"],
+    technologies: ["Java", "Android Studio", "Android SDK", "Accelerometer (Sensors)", "curve"],
     featured: false,
     codeURL: "https://github.com/Alicia-Lundberg/Bowling-Buddy",
-    longDescription: "",
-    features: [
-      "",
-      "",
-      "",
-      ""
+    longDescription: [
+      "Bowling Buddy is an Android app developed as part of the Advanced Interaction Design course in a group of four. ",
+      "The app lets you practice bowling anywhere using just your phone, with the accelerometer detecting speed and angle to simulate throws and determine how many pins you hit. ",
+      "In the project, I focused on UX/UI design and interactive elements, creating the bowling ball, pins, and alley background from scratch in Linearity, as well as developing animations and adding sound effects. ",
+      "Meanwhile, my teammates worked on the movement readings, and together we implemented core functionality like throwing the ball and knocking down pins. ",
+      "We tested the app with users throughout the process, observing how people interacted with the throwing motions and refining sounds to enhance the user experience. ",
+      "Developed in Android Studio, Bowling Buddy requires a device with an accelerometer and runs on Android 7.0 (Nougat) or later. ",
     ],
-    challenges: "",
-    learned: "",
-    date: "2024-06-01",
+    features: [
+      "Throw ball by swinging yout phone",
+      "Custom-made graphics and animations",
+      "Simple scoring system",
+      "Help screen with animation",
+      "Static leaderboard mockup"
+    ],
+    date: "2024-03-01",
   },
   {
     slug: "portfolio",
@@ -76,9 +92,8 @@ export const projects = [
       "",
       ""
     ],
-    challenges: "",
-    learned: "",
-    date: "2024-06-01",
+    //learned: "",
+    date: "2025-09-01",
   },
   {
     slug: "green-maws",
@@ -97,8 +112,7 @@ export const projects = [
       "",
       ""
     ],
-    challenges: "",
-    learned: "",
+    //learned: "",
     date: "2024-06-01",
   },/*
   {
@@ -153,12 +167,8 @@ export const projects = [
       "",
       ""
     ],
-    challenges: "",
-    learned: "",
     date: "2024-06-01",
   },
 
 
-
-  
 ];

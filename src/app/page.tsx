@@ -94,16 +94,15 @@ export default function Home() {
 
           <div className="rounded-2xl p-8 md:p-12 shadow-sm bg-white">
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Som UX-designer och projektledare är jag driven av att skapa
-              meningsfulla digitala upplevelser som verkligen gör skillnad för
-              användare. Med en bakgrund inom både design och teknik, förstår
-              jag vikten av att balansera estetik med funktionalitet.
+              I love discovering new ways to create, and I enjoy working with people and projects that inspire me. 
+              Whether I’m coding, designing, or crafting with my hands, I enjoy exploring new ways to create 
+              and challenge myself. I thrive when I can learn, grow, and see the results of my work. 
+              
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Mitt fokus ligger på användarcentrerad design, agil
-              projektledning och strategisk innovation. Jag tror på kraften i
-              att kombinera kreativitet med datadriven beslutsfattning för att
-              leverera lösningar som överträffar förväntningar.
+              Outside of professional life, you’ll often find me enjoying a cup of tea, 
+              planning trips to new places, experimenting with new creative projects, 
+              or spending quality time with family and friends.
             </p>
           </div>
         </div>

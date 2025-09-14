@@ -11,7 +11,7 @@ export default function CVPage() {
           {/* Header */}
           <div className="text-center mb-12">
             <a
-              href="/CV.pdf"
+              href="/resume.pdf"
               download
               className="inline-flex items-center px-4 py-2 bg-tertiary hover:bg-tertiaryDark text-white rounded-lg shadow"
             >
@@ -111,17 +111,17 @@ export default function CVPage() {
 
               {/* Languages */}
               <div className="bg-white rounded-xl shadow p-6">
-                <h3 className="text-lg font-semibold mb-4">Språk</h3>
+                <h3 className="text-lg font-semibold mb-4">Languages</h3>
                 <div className="space-y-2">
                   <div className="flex justify-between">
-                    <span>Svenska</span>
+                    <span>Swedish</span>
                     <span className="text-tertiary
-    ">Modersmål</span>
+    ">Native</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Engelska</span>
+                    <span>English</span>
                     <span className="text-tertiary
-    ">Flytande</span>
+    ">Business</span>
                   </div>
                 </div>
               </div>
@@ -188,7 +188,7 @@ export default function CVPage() {
 
               {/* Education */}
               <div className="bg-white rounded-xl shadow p-6">
-                <h2 className="text-2xl font-semibold mb-6">Utbildning</h2>
+                <h2 className="text-2xl font-semibold mb-6">Education</h2>
                 <div className="border-l-2 border-tertiary pl-6">
                   <div className="flex items-center mb-2">
                     <h3 className="text-lg font-semibold">M.Sc in Information and Communication Engineering Technologies</h3>

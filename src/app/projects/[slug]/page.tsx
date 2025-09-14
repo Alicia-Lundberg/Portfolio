@@ -92,7 +92,7 @@ export default async function Page({
 
               {/* Project Info */}
               <div className="rounded-xl border p-6">
-                <h3 className="text-lg font-semibold mb-4">Projectinfo</h3>
+                <h3 className="text-lg font-semibold mb-4">Project info</h3>
                 <div className="space-y-3">
                   {project.category && (
                     <div>
@@ -108,7 +108,7 @@ export default async function Page({
                         Date
                       </span>
                       <p className="font-medium">
-                        {new Date(project.date).toLocaleDateString("sv-SE", {
+                        {new Date(project.date).toLocaleDateString("en-EN", {
                           year: "numeric",
                           month: "long",
                         })}
@@ -169,16 +169,8 @@ export default async function Page({
                 </ul>
               </div>
             )}
-            {/* Challenges */}
-            {project.challenges && (
-              <div className="rounded-xl border p-6">
-                <h2 className="text-2xl font-semibold mb-4">Challenges</h2>
-                <p className="text-muted-foreground leading-relaxed">
-                  {project.challenges}
-                </p>
-              </div>
-            )}
-            {/* What I learned */}
+            {/*
+            
             {project.learned && (
               <div className="rounded-xl border p-6">
                 <h2 className="text-2xl font-semibold mb-4">What I learned</h2>
@@ -187,6 +179,8 @@ export default async function Page({
                 </p>
               </div>
             )}
+            */}
+            
           </div>
         </div>
       </div>
